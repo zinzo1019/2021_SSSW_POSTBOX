@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="EditText" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorControlNormal">#FFFFFF</item>
+        <!-- focused line color --> <item name="android:editTextColor">#494949</item>
+        <!-- text color -->
+        <item name="android:textColorHighlight">#494949</item> <!-- selected text color -->
+        <item name="android:textColorHint">#2C2C2C</item> <!-- hint color -->
+    </style>
+
+</resources>

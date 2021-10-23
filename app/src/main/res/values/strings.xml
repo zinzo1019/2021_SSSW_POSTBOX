@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SSWU_POSTBOX</string>
+    <string name="close_btn">close botton</string>
+    <string name="save_btn">save botton</string>
+    <string name="share_btn">share botton</string>
+    <string name="back_btn">back botton</string>
+    <string name="small_suryong">SSWU suryong logo</string>
+    <string name="default_notification_channel_id"><![CDATA[" <string name=\"default_notification_channel_id\" translatable=\"false\">fcm_default_channel</string>"]]></string>
+</resources>

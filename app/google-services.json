@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "60347756913",
+    "project_id": "sswu-postbox",
+    "storage_bucket": "sswu-postbox.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:60347756913:android:8deedf749b6bde3c2dc6d0",
+        "android_client_info": {
+          "package_name": "com.example.sswu_postbox"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "60347756913-hjc2ad148mbjic8054h5prpgd3j0sv15.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6PJAP9l1HTW0Rv8wkioZRdffALybhv5A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "60347756913-hjc2ad148mbjic8054h5prpgd3j0sv15.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

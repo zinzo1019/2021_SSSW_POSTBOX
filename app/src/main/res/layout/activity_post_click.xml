@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PostClickActivity"
+    android:background="#FFFFFF">
+
+
+
+    <!--글 제목 띄우기-->
+    <TextView
+        android:id="@+id/webview_title"
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20sp"
+        android:layout_marginRight="10dp"
+        android:fontFamily="@font/elicedigitalbaseum_bold"
+        android:textColor="@color/black"
+        android:textSize="10pt"
+        android:textStyle="bold"
+        app:layout_constraintRight_toLeftOf="@id/activity_post_click_close_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintHorizontal_chainStyle="packed" />
+
+    <ImageButton
+        android:id="@+id/activity_post_click_close_btn"
+        android:layout_width="30dp"
+        android:layout_height="25dp"
+        android:layout_marginRight="20dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/close_btn"
+        android:gravity="right"
+        android:scaleType="fitCenter"
+        android:src="@drawable/close_btn"
+        app:layout_constraintBottom_toBottomOf="@id/webview_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@id/webview_title"
+        app:layout_constraintTop_toTopOf="@id/webview_title" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:background="#707070"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/webview_title"></View>
+
+
+
+    <!-- 홈페이지 글 띄우기 예시(아직)-->
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="550sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line" />
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="373dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/linear2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/webview"
+        app:layout_constraintVertical_chainStyle="packed">
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/webview_save_btn"
+            android:layout_width="30dp"
+            android:layout_height="32dp"
+            android:background="@drawable/save_btn_click_unclink"
+            android:contentDescription="@string/save_btn"
+            android:gravity="right"
+            android:scaleType="fitCenter" />
+
+        <ImageButton
+            android:id="@+id/webview_share_btn"
+            android:layout_width="28dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="3dp"
+            android:background="@drawable/mail_icon"
+            android:contentDescription="@string/share_btn"
+            android:gravity="end"
+            android:scaleType="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_width="373dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear1"
+        app:layout_constraintVertical_chainStyle="packed">
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/webview_save_btn_txt"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/elicedigitalbaseum_regular"
+            android:gravity="center"
+            android:scaleType="fitCenter"
+            android:text="보관"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/webview_share_btn_txt"
+            android:layout_width="28dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="3dp"
+            android:fontFamily="@font/elicedigitalbaseum_regular"
+            android:gravity="center"
+            android:scaleType="center"
+            android:text="공유"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

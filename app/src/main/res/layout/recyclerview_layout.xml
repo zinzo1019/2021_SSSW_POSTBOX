@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/home_keyword_recyclerview"
+    android:layout_width="110dp"
+    android:layout_height="35dp"
+    android:gravity="center"
+    android:background="@drawable/home_btn_background"
+    android:layout_marginRight="10dp"
+    android:textColor="@color/black"
+    android:textSize="15sp"
+     />

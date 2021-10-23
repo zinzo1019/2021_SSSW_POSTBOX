@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.sswu_postbox">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_postbox_2"
+        android:label="수룡이의 우편함"
+        android:roundIcon="@mipmap/ic_launcher_postbox_2_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SSWU_POSTBOX"
+        android:usesCleartextTraffic="true"
+        android:largeHeap="true"
+        android:hardwareAccelerated="false">
+        <activity android:name=".DepartModiActivity"></activity>
+        <activity android:name=".QuestionActivity" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+
+        <activity android:name=".SettingActivity" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".PostClickActivity" />
+        <activity
+            android:name=".LockerActivity"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".KeywordSettingActivity"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity
+            android:name=".CheckKeywordPostActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".SignUpActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".LoginActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

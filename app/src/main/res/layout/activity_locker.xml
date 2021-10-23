@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CheckKeywordPostActivity"
+    android:background="#FFFFFF">
+
+
+    <!--키워드 설정 페이지 title-->
+    <ImageButton
+        android:id="@+id/locker_back_btn"
+        android:layout_width="45dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="40dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/back_btn"
+        android:scaleType="fitCenter"
+        android:src="@drawable/back_btn"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintRight_toLeftOf="@id/locker_title"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/locker_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="9dp"
+        android:layout_marginRight="250dp"
+        android:text="보관함"
+        android:fontFamily="@font/elicedigitalbaseum_bold"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/locker_back_btn"
+        app:layout_constraintLeft_toRightOf="@+id/locker_back_btn"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/locker_back_btn"
+        app:layout_constraintVertical_bias="0.437" />
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="23dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginRight="23dp"
+        android:layout_marginBottom="3dp"
+        android:background="#707070"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/locker_title" />
+
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--키워드 검색하기-->
+            <TextView
+                android:id="@+id/locker_keyword_searching_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="키워드 검색하기"
+                android:fontFamily="@font/elicedigitalbaseum_bold"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                app:layout_constraintBottom_toTopOf="@+id/ghg"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.example.sswu_postbox.ClearEditText
+                android:id="@+id/ghg"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/keyword_search"
+                android:hint="찾고싶은 키워드를 입력하세요"
+                android:inputType="text"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
+                android:textColor="#000000"
+                android:textColorHint="@color/black"
+                android:textSize="10dp"
+                app:layout_constraintEnd_toStartOf="@+id/locker_search_btn"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/locker_search_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/locker_keyword_searching_title" />
+
+            <Button
+                android:id="@+id/locker_search_btn"
+                android:layout_width="70dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/click_btn"
+                android:fontFamily="@font/elicedigitalbaseum_regular"
+                android:text="검색"
+                android:textColor="@color/white"
+                android:textSize="11dp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/crystal_blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/ghg"
+                app:layout_constraintTop_toTopOf="@id/ghg" />
+
+
+            <TextView
+                android:id="@+id/my_keyword_list_title4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="20dp"
+                android:text="나의 키워드 목록"
+                android:fontFamily="@font/elicedigitalbaseum_bold"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ghg"
+                tools:layout_constraintLeft_toLeftOf="parent" />
+
+            <TextView
+                android:id="@+id/my_keyword_list_title5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="확인하고 싶은 키워드를 선택하세요"
+                android:textSize="10dp"
+                app:layout_constraintBaseline_toBaselineOf="@id/my_keyword_list_title4"
+                app:layout_constraintLeft_toRightOf="@id/my_keyword_list_title4"
+                app:layout_constraintTop_toTopOf="@id/my_keyword_list_title4" />
+
+
+            <GridView
+                android:id="@+id/my_keyword_list2"
+                android:layout_width="0dp"
+                android:layout_height="175sp"
+                android:layout_marginStart="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginRight="25dp"
+                android:horizontalSpacing="5dp"
+                android:numColumns="3"
+                android:verticalSpacing="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/my_keyword_list_title4"
+                tools:ignore="MissingConstraints" />
+
+            <!--공지사항-->
+            <TextView
+                android:id="@+id/announcement_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="20sp"
+                android:fontFamily="@font/elicedigitalbaseum_bold"
+                android:text="보관된 공지사항"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/my_keyword_list2"
+                tools:ignore="NotSibling"
+                tools:layout_constraintLeft_toLeftOf="parent" />
+
+            <ListView
+                android:id="@+id/locker_post_listView"
+                android:layout_width="0dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="8dp"
+                android:dividerHeight="7dp"
+                android:divider="#ffffff"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/announcement_title" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#FFFFFF"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_navigation_bar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

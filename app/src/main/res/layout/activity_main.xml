@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="29dp"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/for_crystal"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:fontFamily="@font/elicedigitalbaseum_regular"
+        android:gravity="center"
+        android:text="수 정 이 를  위 한  학 교  홈 페 이 지  알 림"
+        android:textColor="#000000"
+        android:layout_marginTop="30dp"
+        android:textSize="9pt" />
+
+    <ImageView
+        android:id="@+id/mailbox"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        android:layout_gravity="center"
+        android:src="@drawable/main_wordlogo" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="" />
+
+    <ImageView
+        android:id="@+id/mainimg"
+        android:layout_width="350dp"
+        android:layout_height="370dp"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter"
+
+        android:src="@drawable/main_suryong"
+        android:visibility="visible" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:text="" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        >
+
+        <Button
+            android:id="@+id/signIn"
+            android:layout_width="160sp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/main_btn"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="SIGN IN"
+            android:textColor="#FFFFFF"
+            android:textSize="9pt"
+            app:backgroundTint="@color/crystal_blue" />
+
+        <Button
+            android:id="@+id/signUp"
+            android:layout_width="160sp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/main_btn"
+            android:text="SIGN UP"
+            android:textColor="#FFFFFF"
+            android:textSize="9pt"
+            app:backgroundTint="@color/crystal_blue" />
+
+    </LinearLayout>
+
+</LinearLayout>

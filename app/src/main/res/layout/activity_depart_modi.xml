@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DepartModiActivity">
+
+    <!--알림창  페이지 title-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:paddingTop="40dp"
+        tools:ignore="MissingConstraints">
+
+
+        <ImageButton
+            android:id="@+id/modi_back_btn"
+            android:layout_width="45dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:background="@android:color/transparent"
+            android:gravity="start"
+            android:scaleType="fitCenter"
+            android:src="@drawable/back_btn"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toStartOf="@+id/department_modi"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/department_modi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/elicedigitalbaseum_bold"
+            android:text="학과 수정"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/modi_back_btn" />
+
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width= "360dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="80dp"
+            android:layout_gravity="center_horizontal"
+            android:background="#707070"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/login_background_image"
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:scaleType="fitXY"
+            android:layout_gravity="bottom"
+            android:src="@drawable/login_background" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/id1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="180dp"
+                android:fontFamily="@font/elicedigitalbaseum_bold"
+                android:text="현재 학과"
+                android:textColor="@color/black" />
+
+
+            <TextView
+                android:id="@+id/before_major"
+                android:layout_width="320sp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/edittext_background"
+                android:ems="10"
+                android:enabled="false"
+                android:fontFamily="@font/elicedigitalbaseum_regular"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="00 과"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/id2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/elicedigitalbaseum_bold"
+                android:text="변경할 학과"
+                android:textColor="@color/black" />
+
+            <Spinner
+                android:id="@+id/after_major"
+                android:layout_width="320sp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@drawable/spinner_background"
+                android:entries="@array/spinner_entries"
+                android:layout_marginTop="5dp"
+                android:spinnerMode="dropdown" />
+
+            <Button
+                android:id="@+id/modi_button"
+                android:layout_width="320sp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:background="@color/crystal_blue"
+                android:backgroundTint="@color/purple_500"
+                android:fontFamily="@font/elicedigitalbaseum_bold"
+                android:text="변경"
+                app:backgroundTint="@color/crystal_blue"
+                tools:fontFamily="@font/elicedigitalbaseum_bold" />
+        </LinearLayout>
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

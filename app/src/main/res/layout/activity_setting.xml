@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingActivity"
+    android:background="#ffffff">
+
+    <ImageButton
+        android:id="@+id/locker_back_btn"
+        android:layout_width="45dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="40dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/back_btn"
+        android:scaleType="fitCenter"
+        android:src="@drawable/back_btn"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/check_keyword_post_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/check_keyword_post_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="9dp"
+        android:fontFamily="@font/elicedigitalbaseum_bold"
+        android:text="설정"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/locker_back_btn"
+        app:layout_constraintLeft_toRightOf="@+id/locker_back_btn"
+        app:layout_constraintTop_toTopOf="@+id/locker_back_btn"
+        app:layout_constraintVertical_bias="0.437" />
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="23dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginRight="23dp"
+        android:layout_marginBottom="3dp"
+        android:background="#707070"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/check_keyword_post_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10sp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/userName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:fontFamily="@font/elicedigitalbaseum_bold"
+                        android:text="00"
+                        android:textColor="@color/black"
+                        android:textSize="25dp" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/elicedigitalbaseum_bold"
+                        android:text="님"
+                        android:textColor="@color/black"
+                        android:textSize="25dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/department"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/elicedigitalbaseum_regular"
+                    android:text="00과"
+                    android:textSize="18dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="314dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginRight="23dp"
+            android:background="#707070" />
+
+        <Button
+            android:id="@+id/keyword"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:paddingTop="7dp"
+            android:background="#00ff0000"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/elicedigitalbaseum_regular"
+            android:gravity="left"
+            android:onClick="onclick"
+            android:text="키워드 설정"
+            android:textSize="7.5pt"
+            android:textColor="@color/black"
+            tools:ignore="OnClick" />
+
+        <View
+            android:layout_width="314dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="23dp"
+            android:layout_marginRight="23dp"
+            android:background="#3E707070" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:paddingTop="7dp"
+            android:background="#00ff0000"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/elicedigitalbaseum_regular"
+            android:gravity="left"
+            android:text="학과 수정"
+            android:textSize="7.5pt"
+            android:onClick="goDepartment"
+            android:textColor="@color/black" />
+
+        <View
+            android:layout_width="314dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="23dp"
+            android:layout_marginRight="23dp"
+            android:background="#3E707070" />
+
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:paddingTop="7dp"
+            android:background="#00ff0000"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/elicedigitalbaseum_regular"
+            android:gravity="left"
+            android:text="로그아웃"
+            android:textSize="7.5pt"
+            android:onClick="btn_logout"
+            android:textColor="@color/black" />
+
+        <View
+            android:layout_width="314dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="23dp"
+            android:layout_marginRight="23dp"
+            android:background="#3E707070" />
+
+        <Button
+            android:id="@+id/question"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:paddingTop="7dp"
+            android:background="#00ff0000"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/elicedigitalbaseum_regular"
+            android:gravity="left"
+            android:onClick="goQuestion"
+            android:text="문의하기"
+            android:textSize="7.5pt"
+            android:textColor="@color/black"
+            tools:ignore="OnClick" />
+
+        <View
+            android:layout_width="314dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="23dp"
+            android:layout_marginRight="23dp"
+            android:background="#3E707070" />
+
+        <!--수룡이 로고-->
+        <ImageView
+            android:layout_width="46dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/small_suryong"
+            android:src="@drawable/suryong_icon"></ImageView>
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#FFFFFF"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_navigation_bar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

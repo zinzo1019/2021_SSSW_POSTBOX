@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/body"
+        android:paddingLeft="8dp"
+        android:gravity="center|start"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="8">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/contents_postTitle"
+                android:layout_width="218dp"
+                android:layout_height="match_parent"
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/contents_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:gravity="end|center"
+        android:layout_weight="2"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+
+        <ImageButton
+            android:id="@+id/save_btn"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:background="@drawable/save_btn_click_unclink"/>
+
+
+        <ImageButton
+            android:id="@+id/post_share_btn"
+            android:layout_width="17dp"
+            android:layout_height="22dp"
+            android:layout_marginRight="20dp"
+            android:background="@android:color/transparent"
+            android:gravity="right"
+            android:maxWidth="10dp"
+            android:maxHeight="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/share_btn" />
+    </LinearLayout>
+</LinearLayout>
